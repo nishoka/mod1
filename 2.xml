@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customerdata
+xmlns="http://www.capgemini.com"
+xmlns:x="http://www.w3.org/2001/XMLSchema-instance"
+x:schemaLocation="http://www.capgemini.com customer.xsd">
+<customer id="1">
+<name>ajay</name>
+<mobile><9502146633></mobile>
+</customer>
+<customer id="2">
+<name>vijay</name>
+<mobile><950146633></mobile>
+</customer>
+</customerdata>
