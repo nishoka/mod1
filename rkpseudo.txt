@@ -1,0 +1,48 @@
+// Pseudocode to calculate the bill at the service station
+
+Begin
+Declare TypeOfService as STRING
+Declare VehicleType as STRING
+Declare CostofVehicle as INTEGER
+Declare CostOfService as INTEGER
+INITIALIZE CostOfService=0
+
+// Taking the inputs from the customer
+
+PROMPT "Enter the Vehicle type of the customer" and STORE IN VehicleType
+PROMPT "Enter the Service type" and STORE IN TypeOfService
+PROMPT "Enter the Cost of Vehicle of the customer" and STORE IN CostofVehicle
+
+// Calculating the bill information and displaying the information
+
+
+IF(TypeOfService='F')THEN                     /*Calculating bill for 'F' Type of Service */
+CostOfService=CostOfService+200
+
+ELSE IF(TypeOfService='BR')THEN               /* Calculating bill for 'BR' Type of Service */
+
+IF(VehicleType='Hatchback')THEN
+CostOfService=CostOfService+((15*CostofVehicle)/100)     /*Calculating bill for 'HatchBack' Type of vehicle */
+
+ELSE IF(VehicleType='Small Cars')THEN
+CostOfService=CostOfService+((10*CostofVehicle)/100)     /*Calculating bill for 'Small Cars' Type of vehicle */
+
+ELSE IF(VehicleType='Sedan')THEN
+CostOfService=CostOfService+((18*CostofVehicle)/100)     /*Calculating bill for 'Sedan' Type of vehicle */
+
+ELSE 
+PRINT "INVALID VEHICLE TYPE"                             /* Exception Handling */
+END IF
+
+ELSE
+PRINT "INVALID SERVICE TYPE"                            /* Exception Handling */
+END IF
+
+// Printing the answers
+
+PRINT VehicleType
+PRINT TypeOfService
+PRINT CostOfService
+ 
+END
+
