@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Account_master>
+  <user>
+	<Account_No>A001</Account_No>
+	<Account_Type>saving</Account_Type>
+	<Balance>50000</Balance>
+	<Opening_Date>01/01/2015</Opening_Date>
+	<Account_Name>xyz</Account_Name>
+	<Account_Address>AIROLO</Account_Address>
+	<Pan_card_no>828282828</Pan_card_no>
+	<Account_access_mode>either</Account_access_mode>
+  </user>
+<user>
+	<Account_No>A002</Account_No>
+	<Account_Type>saving</Account_Type>
+	<Balance>40000</Balance>
+	<Opening_Date>02/06/2015</Opening_Date>
+	<Account_Name>YRY</Account_Name>
+	<Account_Address>HINJAWADI</Account_Address>
+	<Pan_card_no>98989880</Pan_card_no>
+	<Account_access_mode>either</Account_access_mode>
+  </user>
+<user>
+	<Account_No>A003</Account_No>
+	<Account_Type>saving</Account_Type>
+	<Balance>60000</Balance>
+	<Opening_Date>01/06/2015</Opening_Date>
+	<Account_Name>GHG</Account_Name>
+	<Account_Address>Hyderabad</Account_Address>
+	<Pan_card_no>787878789</Pan_card_no>
+	<Account_access_mode>either</Account_access_mode>
+  </user>
+<user>
+	<Account_No>A004</Account_No>
+	<Account_Type>current</Account_Type>
+	<Balance>70000</Balance>
+	<Opening_Date>05/07/2015</Opening_Date>
+	<Account_Name>AGA</Account_Name>
+	<Account_Address>Pune</Account_Address>
+	<Pan_card_no>656565657</Pan_card_no>
+	<Account_access_mode>surivivor</Account_access_mode>
+  </user>
+<user>
+	<Account_No>A005</Account_No>
+	<Account_Type>current</Account_Type>
+	<Balance>20000</Balance>
+	<Opening_Date>30/06/2015</Opening_Date>
+	<Account_Name>FFF</Account_Name>
+	<Account_Address>Delhi</Account_Address>
+	<Pan_card_no>383838389</Pan_card_no>
+	<Account_access_mode>survivor</Account_access_mode>
+  </user>
+</Account_master>
