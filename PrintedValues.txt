@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        
+
+        // Called on body's `onload` event
+        function init() {
+        // Retrieving the text input's value which was stored into localStorage
+        var already= localStorage.getItem("already");
+
+        // Writing the value in the document
+        document.write("Do you have a loan already? " + already);
+        document.write("<br>");
+        var name = localStorage.getItem("name");
+        document.write("Customer Name:  " + name);
+        document.write("<br>");
+        var mobile = localStorage.getItem("mobile");
+        document.write("Mobile Number: " + mobile);
+        document.write("<br>");
+        var email = localStorage.getItem("email");
+        document.write("EMailId:  " + email);
+        document.write("<br>");
+        var proof = localStorage.getItem("proof");
+        document.write("Proof of Identity:  " + proof);
+        document.write("<br>");
+        var amount = localStorage.getItem("amount");
+        document.write("Loan Amount:  " + amount);
+
+
+
+    }
+
+    
+    </script>
+</head>
+<body onload="init();">
+
+</body>
+</html>
