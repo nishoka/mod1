@@ -1,0 +1,48 @@
+BEGIN
+ACCEPT Course A, Course B, Percentage, ActualFee
+ACCEPT Student details such as name,Percentage,CourseName
+
+//Basic Fee for Course A is specified below
+
+BasicFeeOfA=6000 
+
+//Basic Feefor Course B is specified below
+
+BAsicFeeOfB=8000
+
+//Below are the conditions for if the student wishes to choose Course A
+
+If Student choses Course A 
+AND
+If Student's Percentage is greater than 90 then
+ActualFee=(50/100)*(BasicFeeOfA);
+PRINT ActualFee
+Else If Student's Percentage is greater than or equal to 80 and less than 90 then
+ActualFee=(40/100)*(BasicFeeOfA);
+PRINT ActualFee
+Else If Student's Percentage is greater than or equal to 70 and less than 80 then
+ActualFee=(30/100)*(BAsicFeeOfA);
+PRINT ActualFee
+Else If Student's Percentage is less than 70 then
+Display Not Applicable for availing discounts!!
+Else
+PRINT Student has chosen Course B
+
+//Below are the conditions if student wishes to choose Course B
+
+If Student chooses Course B
+AND
+If Student's Percentage is greater than 90 then
+ActualFee=(50/100)*(BasicFeeOfB);
+PRINT ActualFee
+Else If Student's Percentage is greater than or equal to 80 and less than 90 then
+ActualFee=(40/100)*(BasicFeeOfB);
+PRINT ActualFee
+Else If Student's Percentage is greater than or equal to 70 and less than 80 then
+ActualFee=(30/100)*(BAsicFeeOfB);
+PRINT ActualFee
+Else If Student's Percentage is less than 70 then
+PRINT Not Applicable for availing discounts!!
+Else
+PRINT Student has chosen Course A
+
