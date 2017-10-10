@@ -1,0 +1,2 @@
+--1.Answer
+select account_no,account_name,access_mode from AccountMaster where account_no in (select account_no from transactions where tot='deposit');
