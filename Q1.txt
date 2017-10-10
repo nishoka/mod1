@@ -1,0 +1,84 @@
+/**************
+*Employee ID	: 137544
+*File		: Q1.txt
+*Author Name	: PACHIKORI MADHAV
+*Descripiton	: Pseudo code to accept, store and display electricity consumer information.
+*Version	: 1.0
+*Date		: 10-Oct-2017
+**************/
+
+
+//Structure Declaration 
+
+RECORD Customer
+
+	DECLARE customer_no as INTEGER
+	DECLARE customer_name as STRING
+	DECLARE no_of_units as INTEGER						//Declaring the structure elements
+END RECORD
+
+
+BEGIN
+
+	DECLARE cust AS Customer						//declaring the stucture
+	PROMPT "Enter the customer number" AND STORE IN cust.customer_no	//reading customer number
+        PROMPT "Enter the customer name" AND STORE IN cust.customer_name	//reading customer name
+        PROMPT "Enter the units" AND STORE IN cust.no_of_units			//reading number of units
+	IF(!cust_found())
+            EXCEPTION
+                    WHEN CustomerNotFound THEN					//Exception Handling for non existing customer number 
+			     PRINT errormessage	
+	ELSE Display()		 
+END
+
+
+
+
+
+/**************
+*Module Name    : cust_found()
+*Input Parameter: data
+*Return Type    : Void
+*Author Name	: PACHIKORI MADHAV
+*Descripiton	: To validate if the Customer exists or not.
+*Date		: 10-Oct-2017
+**************/
+
+SUB cust_found()
+	IF(!CustomerExists(cust.customer_no))THEN
+			RAISE CustomerNotFound("Customer does not exists")
+					 
+END SUB
+
+
+
+/**************
+*Module Name    : Display()
+*Input Parameter: data
+*Return Type    : Void
+*Author Name	: PACHIKORI MADHAV
+*Descripiton	: To display the bill.
+*Date		: 10-Oct-2017
+**************/
+
+
+SUB Display()
+
+	DECLARE total_bill AS FLOAT						//Declaring variable "total_bill"
+	DISPLAY "Customer number : " + cust.customer_no
+	DISPLAY "Customer name : " + cust.customer_name				//Displaying Customer details i.e, number and name
+
+	IF(cust.no_of_units<=0)
+		DISPLAY "Enter the valid Reading"
+	ELSE
+		
+		IF(cust.no_of_units<=100) THEN
+			total=(no_of_units*02.96)				//Calculating total billing amount
+		DISPLAY "Total Electricity Charges = Rs." + total_bll		//Primary Output for reading less than or equal to 100 units
+	
+	ELSE
+		IF(cust.no_of_units>100) THEN
+			total=(no_of_units*05.56)				//Calculating total billing amount
+		DISPLAY "Total Electricity Charges = Rs." + total_bill		//Primary Output for reading greater than 100 units
+
+END SUB
