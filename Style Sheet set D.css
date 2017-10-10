@@ -1,0 +1,11 @@
+﻿#total{
+    border:5px solid black;
+    float:inherit;
+    width:400px;
+}
+#service{
+    border:1px solid black;
+    width:350px;
+    float:inherit;
+    margin-left:10px;
+}

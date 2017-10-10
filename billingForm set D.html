@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+
+        @import url('StyleSheet.css');
+    </style>
+</head>
+<body><br />
+    <center>
+    <div id="total"><br />
+    <center>Billing Form</center><br />
+    <form name="example">
+        <table align="center" cellspacing="10">
+            <tr>
+                <td>Name<sup>*</sup></td><td></td>
+                <td><select name="title" required><option value="Mr">Mr</option><option value="Mrs" selected>Mrs</option><option value="Ms">Ms</option><option value="Dr">Dr</option></select><input type="text" name="name"  required autofocus /> </td>
+            </tr>
+
+            <tr>
+                <td>Address<sup>*</sup></td><td></td>
+                <td><input type="text" name="address"  required /> </td>
+            </tr>
+            <tr>
+                <td>Mobile Number<sup>*</sup></td><td></td>
+                <td><input type="text" name="mobile" pattern="[0-9]{10}"  required/> </td
+            </tr>
+            <tr>
+                <td>Email Id<sup>*</sup></td><td></td>
+                <td><input type="email" name="email" required /> </td>
+            </tr>
+            <tr>
+                <td>Select Car Model</td><td></td>
+                <td><select name="model" ><option value="all">All</option><option value="Hatchback" selected>Hatchback</option><option value="Small Cars">Small Cars</option><option value="Sedan">Sedan</option></select></td>
+            </tr>
+            </table>
+        <div id="service">
+        <table align="center" cellspacing="10">
+            <tr>
+                <td align="left">Type of Service Taken<sup>*</sup></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <input type="checkbox" name="type" value="F" id="F" />FreeService</td><td>&nbsp;&nbsp;&nbsp;</td><td>
+                    <input type="checkbox" name="type" value="B" id="B" />BodyRepair
+                </td>
+            </tr>
+            </table>
+        </div>
+ <div>
+        <table align="center" cellspacing="10">
+            <tr>
+                <td>Cost of the Vehicle<sup>*</sup></td><td></td>
+                <td><input type="number" name="cost"  required /> </td>
+            </tr>
+
+            <tr>
+                <td align="center"><input type="submit" value="Submit" /></td><td></td>
+                <td align="center"><input type="reset" value="Reset" /></td>
+            </tr>
+        </table>
+        </div>
+    </form>
+    </div>
+    </center>
+</body>
+</html>
