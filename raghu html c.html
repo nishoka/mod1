@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        #loan {
+            border: 2px solid black;
+            width: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:aquamarine;
+        }
+
+        input[type=submit] {
+            margin-left: 50px;
+        }
+
+        input[type=reset] {
+            margin-left: 5px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function payablecal() {
+
+
+             }
+         function tosubmit(){
+             var already = document.getElementById("already").value;
+             localStorage.setItem("already", already);
+             var name = document.getElementById("name").value;
+             localStorage.setItem("name", name);
+             var mobile = document.getElementById("mobile").value;
+             localStorage.setItem("mobile", mobile);
+             var email = document.getElementById("email").value;
+             localStorage.setItem("email", email);
+             var proof = document.getElementById("proof").value;
+             localStorage.setItem("proof", name);
+             var amount = document.getElementById("amount").value;
+             localStorage.setItem("amount", amount);
+
+
+             return true;
+         }
+         function myFunction()
+         {
+             alert(document.write(name),document.write(mobile),document.write(email),document.write(proof),document.write(loanamount));
+             
+         }
+    </script>
+
+</head>
+<body>
+    <center>
+        <div id="loan">
+            <form name="myform" onsubmit="tosubmit();" action="PrintedValues.html">
+                <center>
+                    <h1>Loan Application Form</h1>
+                    <table>
+                        <tr>
+                            <td>Do you have already</td>
+                            <td></td>
+                            <td><input type="radio" value="Yes" id="already" required />Yes<input type="radio" value="No" id="already" required />No</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Name:</td>
+                            <td></td>
+                            <td><input type="text" name="cust" id="name" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td></td>
+                            <td><input type="tel" name="mob" required pattern="[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" id="mobile" /></td>
+                        <tr>
+                            <td>EMailId</td>
+                            <td></td>
+                            <td><input type="text" name="email" required id="email" /></td>
+                        </tr>
+                        <tr>
+                            <td>Proof of Identity:</td>
+                            <td></td>
+                            <td><input type="checkbox" value="PAN Card" id="proof" />PAN Card</td>
+                            <td><input type="checkbox" value="Voters Id" id="proof" /> Voters Id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><input type="checkbox" value="Passport" id="proof" />Passport</td>
+                            <td><input type="checkbox" value="Driving License" id="proof" />Driving License</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Loan Amount
+                            </td>
+                            <td></td>
+                            <td>
+                                <select>
+                                    <option value="loan amount" id="amount">loan amount</option>
+                                    <option value="50,000 to 100000" required id="amount">50,000 to 100000</option>
+                                    <option value="100001 to 200000" required id="amount">100001 to 200000</option>
+                                    <option value="200001 to 300000" required id="amount">200001 to 300000</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                            <td><input type="submit" value="Apply Loan" onclick="myFunction()"/></td>
+                            <td></td>                     
+                       <td><input type="reset" value="Reset" /></td>
+                        </tr>
+                    </table>
+
+
+                </center>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
