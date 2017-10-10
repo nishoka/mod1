@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Suppliers>
+  <Supplier id="1">
+    <SupplierName>CarZorake</SupplierName>
+    <Country>INDIA</Country>
+    <CreditBalance>20000</CreditBalance>
+  </Supplier>
+  <Supplier id="2">
+    <SupplierName>Gamul</SupplierName>
+    <Country>india</Country>
+    <CreditBalance>30000</CreditBalance>
+  </Supplier>
+  <Supplier id="3">
+    <SupplierName>Pepca</SupplierName>
+    <Country>USA</Country>
+    <CreditBalance>40000</CreditBalance>
+  </Supplier>
+  <Supplier id="4">
+    <SupplierName>Cakeboka</SupplierName>
+    <Country>USA</Country>
+    <CreditBalance>100000</CreditBalance>
+  </Supplier>
+  <Supplier id="5">
+    <SupplierName>cocaboka</SupplierName>
+    <Country>Russia</Country>
+    <CreditBalance>20000</CreditBalance>
+  </Supplier>
+  <Supplier id="6">
+    <SupplierName>Micora</SupplierName>
+    <Country>Australia</Country>
+    <CreditBalance>10000</CreditBalance>
+  </Supplier>
+</Suppliers>

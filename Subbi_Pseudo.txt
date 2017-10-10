@@ -1,0 +1,113 @@
+/*********************************************************************
+ * File                 : Pseudo.txt
+ * Author Name          : Shravan Kumar Baloji
+ * Desc                 : Program to Perform ATM Withdrawn
+ * Version              : 1.0
+ *********************************************************************/
+ 
+BEGIN
+	DECLARE AccountNumber AS INTEGER
+	DECLARE WithDraw_Amount AS REAL
+	DECLARE ATM_Pin As INTEGER
+	PROMPT "AccountNumber" AND STORE IN AccountNumber
+	IF(isValid(AccountNumber)) THEN
+		PROMPT "Enter Your ATM Pin" AND STORE IN ATM_Pin
+   		IF(checkPIN(ATM_Pin)) THEN
+			PROMPT "Enter the amount to be withdraw" AND STORE IN WithDraw_Amount
+			IF(isValidWithDraw(WithDraw_Amount)) THEN
+				performWithDraw(AccountNumber,WithDraw_Amount);
+				PRINT("WithDraw Sucessfull, Thank you...");
+			ELSE
+				PRINT "Your Account Balance is Low... Please Update your Account Balance."
+			END IF
+		ELSE 
+			PRINT "Your have Entered Worng PIN."
+		END IF
+	ELSE
+		PRINT "Account Number is Invalid"
+	END IF
+END
+
+
+/*********************************************************************
+* Module Name         : isValid()
+* Input Parameters    : AccountNumber
+* Return Type         : Boolean
+* Author              : Shravan Kumar Baloji
+* Description         : validate and Check account number.
+ *********************************************************************/
+
+SUB isValid(AccountNumber)
+	IF(isDigits(data)) THEN
+		IF(isExists(AccountNumber)) THEN
+			RETURN true
+		ELSE	
+			RETURN false
+        ELSE
+		RETURN false
+	END IF
+END SUB
+
+
+
+
+
+/*********************************************************************
+* Module Name         : checkPIN()
+* Input Parameters    : ATM_Pin
+* Return Type         : Boolean
+* Author              : Shravan Kumar Baloji
+* Description         : validate and Check PIN number.
+ *********************************************************************/
+
+
+SUB  checkPIN(ATM_Pin)
+	IF(isDigits(ATM_Pin) and ATM_Pin.length == 4) THEN
+		IF(isEqual(ATM_Pin,customer.ATM_pin)) THEN
+			RETURN true
+		ELSE	
+			RETURN false
+	ELSE
+		RETURN false
+	END IF
+END SUB
+
+
+
+
+/*********************************************************************
+* Module Name         : isValidWithDraw()
+* Input Parameters    : WithDraw_Amount
+* Return Type         : Boolean
+* Author              : Shravan Kumar Baloji
+* Description         : validate and Check WithDraw Balance.
+ *********************************************************************/
+
+SUB isValidWithDraw(WithDraw_Amount)
+	IF(isDigits(WithDraw_Amount)) THEN
+			
+		IF(WithDraw_Amount > current_balance) THEN
+			RETURN false
+		ELSE
+			RETURN true
+		END IF
+	ELSE 
+		RETURN false
+	END IF
+
+END SUB
+
+/*********************************************************************
+* Module Name         : performWithDraw()
+* Input Parameters    : AccountNumber,WithDraw_Amount
+* Author              : Shravan Kumar Baloji
+* Description         : Perform Amount WithDraw.
+ *********************************************************************/
+
+
+SUB performWithDraw(AccountNumber,WithDraw_Amount)
+	DECLARE NewAmount AS INTEGER
+	NewAmount = current_balance - WithDraw_Amount
+	current_balance = NewAmount	
+END SUB
+
